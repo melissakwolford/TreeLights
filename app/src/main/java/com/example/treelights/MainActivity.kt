@@ -337,7 +337,7 @@ class MainActivity : Activity() {
         connectButtons[i].isEnabled = false
         statusViews[i].text = "Connecting..."
         Thread {
-            btAdapter?.cancelDiscovery()
+            
             val (sock, err) = openSocket(dev)
             runOnUiThread {
                 connectButtons[i].isEnabled = true
